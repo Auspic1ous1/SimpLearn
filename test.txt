@@ -1,0 +1,346 @@
+program ComprehensiveTest;
+var
+    // Integer variables
+    x, y, z: int;
+    result, counter, limit: int;
+    
+    // Float variables
+    temperature, avg, pi: float;
+    
+    // String variables
+    name, greeting, message: string;
+    city, country: string;
+begin
+    // ============================================
+    // PART 1: STRING OPERATIONS TESTING
+    // ============================================
+    print(1000);  // Section marker
+    
+    // String literal printing
+    print("=== STRING TESTS ===");
+    print("Hello, World!");
+    print("Testing string literals");
+    
+    // String variable assignment and printing
+    name := "Alice";
+    print(name);
+    
+    greeting := "Good Morning!";
+    print(greeting);
+    
+    message := "Welcome to Simplearn";
+    print(message);
+    
+    city := "Mumbai";
+    country := "India";
+    print(city);
+    print(country);
+    
+    // String input testing
+    print("Enter your name:");
+    read(name);
+    print("Hello");
+    print(name);
+    
+    print("Enter your city:");
+    read(city);
+    print("You are from");
+    print(city);
+    
+    // ============================================
+    // PART 2: INTEGER OPERATIONS TESTING
+    // ============================================
+    print(2000);  // Section marker
+    
+    // Basic assignments
+    x := 10;
+    y := 20;
+    z := 5;
+    print(x);
+    print(y);
+    print(z);
+    
+    // Arithmetic operations
+    result := x + y;
+    print(result);  // 30
+    
+    result := y - z;
+    print(result);  // 15
+    
+    result := x * z;
+    print(result);  // 50
+    
+    result := y / z;
+    print(result);  // 4
+    
+    result := y % z;
+    print(result);  // 0
+    
+    // Complex expressions
+    result := (x + y) * z - 10;
+    print(result);  // 140
+    
+    result := x + y * z / 2;
+    print(result);  // 60
+    
+    // Unary minus
+    result := -x;
+    print(result);  // -10
+    
+    // ============================================
+    // PART 3: FLOAT OPERATIONS TESTING
+    // ============================================
+    print(3000);  // Section marker
+    
+    temperature := 25.5;
+    avg := 100.0;
+    pi := 3.14159;
+    
+    print(temperature);
+    print(avg);
+    print(pi);
+    
+    // Float arithmetic
+    avg := temperature + 10.5;
+    print(avg);  // 36.0
+    
+    // ============================================
+    // PART 4: INPUT/OUTPUT TESTING
+    // ============================================
+    print(4000);  // Section marker
+    
+    print("Enter an integer:");
+    read(counter);
+    print("You entered:");
+    print(counter);
+    
+    print("Enter a float:");
+    read(temperature);
+    print("You entered:");
+    print(temperature);
+    
+    // ============================================
+    // PART 5: CONDITIONAL STATEMENTS TESTING
+    // ============================================
+    print(5000);  // Section marker
+    
+    // Simple if-then
+    if x > 5 then
+        print(5001);
+    endif
+    
+    // If-then-else
+    if y > 30 then
+        print(5002);
+    else
+        print(5003);
+    endif
+    
+    // Nested if with strings
+    if counter > 0 then
+        print("Positive number");
+        if counter > 10 then
+            print("Large positive");
+        else
+            print("Small positive");
+        endif
+    else
+        print("Non-positive");
+    endif
+    
+    // Logical operators
+    if counter > 5 and counter < 15 then
+        print(5004);
+    endif
+    
+    if counter < 0 or counter > 100 then
+        print(5005);
+    endif
+    
+    if not counter = 0 then
+        print(5006);
+    endif
+    
+    // All comparison operators
+    if x = 10 then
+        print(5101);  // Equality
+    endif
+    
+    if y != x then
+        print(5102);  // Not equal
+    endif
+    
+    if y > x then
+        print(5103);  // Greater than
+    endif
+    
+    if x < y then
+        print(5104);  // Less than
+    endif
+    
+    if y >= 20 then
+        print(5105);  // Greater or equal
+    endif
+    
+    if x <= 10 then
+        print(5106);  // Less or equal
+    endif
+    
+    // ============================================
+    // PART 6: WHILE LOOP TESTING
+    // ============================================
+    print(6000);  // Section marker
+    
+    // Simple while loop
+    counter := 1;
+    limit := 5;
+    while counter <= limit do
+        print(counter);  // 1, 2, 3, 4, 5
+        counter := counter + 1;
+    endwhile
+    
+    // While loop with strings
+    counter := 3;
+    while counter > 0 do
+        print("Countdown:");
+        print(counter);
+        counter := counter - 1;
+    endwhile
+    
+    // Nested while
+    x := 2;
+    while x <= 3 do
+        y := 1;
+        while y <= 2 do
+            result := x * 10 + y;
+            print(result);  // 21, 22, 31, 32
+            y := y + 1;
+        endwhile
+        x := x + 1;
+    endwhile
+    
+    // ============================================
+    // PART 7: FOR LOOP TESTING
+    // ============================================
+    print(7000);  // Section marker
+    
+    // Simple for loop
+    for counter := 1 to 5 step 1 do
+        print(counter);  // 1, 2, 3, 4, 5
+    endfor
+    
+    // For loop with step > 1
+    for counter := 0 to 10 step 2 do
+        print(counter);  // 0, 2, 4, 6, 8, 10
+    endfor
+    
+    // For loop with step 5
+    for counter := 5 to 20 step 5 do
+        print(counter);  // 5, 10, 15, 20
+    endfor
+    
+    // For loop with strings
+    for counter := 1 to 3 step 1 do
+        print("Iteration:");
+        print(counter);
+    endfor
+    
+    // ============================================
+    // PART 8: COMPLEX NESTED STRUCTURES
+    // ============================================
+    print(8000);  // Section marker
+    
+    // Nested loops with conditionals
+    for x := 1 to 3 step 1 do
+        if x = 2 then
+            print("Special case: x = 2");
+            y := 1;
+            while y <= 3 do
+                print(y);
+                y := y + 1;
+            endwhile
+        else
+            print("Regular case:");
+            print(x);
+        endif
+    endfor
+    
+    // Complex expression with all operators
+    x := 10;
+    y := 20;
+    z := 5;
+    result := ((x + y) * (z - 1)) / 2 + 7;
+    print(result);  // 67
+    
+    // If-else with multiple conditions
+    counter := 15;
+    if counter > 10 and counter < 20 then
+        print("Range 10-20");
+        if counter = 15 then
+            print("Exactly 15");
+        endif
+    else
+        print("Outside range");
+    endif
+    
+    // ============================================
+    // PART 9: MIXED TYPE OPERATIONS
+    // ============================================
+    print(9000);  // Section marker
+    
+    x := 42;
+    temperature := 98.6;
+    name := "Result";
+    
+    print("Integer:");
+    print(x);
+    print("Float:");
+    print(temperature);
+    print("String:");
+    print(name);
+    
+    // Arithmetic with mixed operations
+    result := x + 8;
+    print(result);  // 50
+    
+    avg := temperature - 0.6;
+    print(avg);  // 98.0
+    
+    // ============================================
+    // PART 10: EDGE CASES AND FINAL TESTS
+    // ============================================
+    print(10000);  // Section marker
+    
+    // Zero handling
+    x := 0;
+    print(x);
+    
+    if x = 0 then
+        print("Zero detected");
+    endif
+    
+    // Negative numbers
+    y := -42;
+    print(y);
+    
+    // Empty string assignment
+    message := "";
+    print("Empty string test:");
+    print(message);
+    
+    // Long string
+    greeting := "This is a very long string to test buffer handling";
+    print(greeting);
+    
+    // Final calculations
+    x := 100;
+    y := 50;
+    z := 25;
+    result := (x - y) + (z * 2);
+    print("Final result:");
+    print(result);  // 100
+    
+    // End markers
+    print("=== ALL TESTS COMPLETED ===");
+    print(99999);  // Final marker
+end

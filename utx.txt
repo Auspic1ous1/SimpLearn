@@ -1,0 +1,31 @@
+program string_test;
+var
+  name: string;
+  greeting: string;
+  x: int;
+  pi: float;
+begin
+  // Test string literal printing
+  print("Hello, World!");
+  print("Welcome to the string test program");
+  
+  // Test string variable assignment and printing
+  name := "Alice";
+  print(name);
+  
+  greeting := "Good morning!";
+  print(greeting);
+  
+  // Test mixed types
+  x := 42;
+  print(x);
+  
+  pi := 3.14159;
+  print(pi)
+  
+  // Test reading a string
+  print("Enter your name:");
+  read(name);
+  print("Hello,");
+  print(name);
+end
